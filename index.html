@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>udentysty – Stomatolog Rzeszów</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a2e;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    header .logo span {
+      color: #4fc3f7;
+    }
+
+    header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.75;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      background: #4fc3f7;
+      color: #1a1a2e;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .card .icon {
+      font-size: 2rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card p, .card a {
+      font-size: 1.15rem;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .card a:hover { color: #4fc3f7; }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .hours-table tr td {
+      padding: 4px 0;
+      font-size: 1rem;
+      color: #1a1a2e;
+    }
+
+    .hours-table tr td:first-child {
+      color: #888;
+      width: 120px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .cta h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #1a1a2e;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .cta a:hover { background: #4fc3f7; color: #1a1a2e; }
+
+    .map-wrap {
+      max-width: 960px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    }
+
+    footer {
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">u<span>dentysta</span></div>
+  <div class="subtitle">Gabinet Stomatologiczny · Rzeszów</div>
+</header>
+
+<div class="hero">
+  <h2>Zdrowy uśmiech w dobych rękach</h2>
+  <p>Profesjonalna opieka stomatologiczna w przyjaznej atmosferze. Umów wizytę już dziś.</p>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <div class="icon">📍</div>
+    <h3>Adres</h3>
+    <a href="https://maps.app.goo.gl/1SiGxqMni5dyxMkMA" target="_blank">
+      Dębicka 160<br>35-213 Rzeszów
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📞</div>
+    <h3>Telefon</h3>
+    <a href="tel:666691999">666 691 999</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🕐</div>
+    <h3>Godziny otwarcia</h3>
+    <table class="hours-table">
+      <tr><td>Poniedziałek</td><td>10:00 – 18:00</td></tr>
+      <tr><td>Wtorek</td><td>10:00 – 18:00</td></tr>
+      <tr><td>Środa</td><td>10:00 – 18:00</td></tr>
+      <tr><td>Czwartek</td><td>10:00 – 18:00</td></tr>
+      <tr><td>Piątek</td><td>10:00 – 18:00</td></tr>
+      <tr><td>Sobota</td><td>–</td></tr>
+      <tr><td>Niedziela</td><td>–</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Umów wizytę</h2>
+  <a href="tel:666691999">Zadzwoń: 666 691 999</a>
+</div>
+
+<div class="map-wrap">
+  <iframe
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=Dębicka+160,Rzeszów"
+    allowfullscreen loading="lazy">
+  </iframe>
+</div>
+
+<footer>
+  &copy; 2026 udentysty · Dębicka 160, Rzeszów
+</footer>
+
+</body>
+</html>
