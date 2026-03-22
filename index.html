@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>u dentysty – Gabinet Stomatologiczny Rzeszów</title>
+  <title>u dentysty – Twój gabinet stomatologiczny w Rzeszowie</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -17,263 +17,92 @@
       --white: #ffffff;
     }
 
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
 
-    /* NAV */
     nav {
       background: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 32px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 32px; position: sticky; top: 0; z-index: 100;
     }
-
-    nav .brand {
-      color: white;
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
+    nav .brand { color: white; font-size: 1.3rem; font-weight: 700; }
     nav .brand span { color: var(--accent); }
-
     nav .nav-links { display: flex; gap: 24px; }
-
-    nav .nav-links a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-
+    nav .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
     nav .nav-links a:hover { color: white; }
 
-    /* HERO */
     .hero {
       background: linear-gradient(135deg, var(--primary) 0%, #16213e 60%, #0f3460 100%);
-      color: white;
-      padding: 80px 20px 70px;
-      text-align: center;
+      color: white; padding: 80px 20px 70px; text-align: center;
     }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.15; margin-bottom: 18px; }
     .hero h1 span { color: var(--accent); }
-
-    .hero p {
-      font-size: 1.15rem;
-      opacity: 0.8;
-      max-width: 560px;
-      margin: 0 auto 36px;
-      line-height: 1.6;
-    }
-
+    .hero p { font-size: 1.1rem; opacity: 0.8; max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
     .hero .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
+    .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
     .btn-primary { background: var(--accent); color: var(--primary); }
     .btn-primary:hover { background: #81d4fa; }
     .btn-outline { border: 2px solid rgba(255,255,255,0.4); color: white; }
     .btn-outline:hover { border-color: white; }
 
-    /* SECTION */
     section { padding: 64px 20px; }
     section.alt { background: var(--white); }
-
     .container { max-width: 1000px; margin: 0 auto; }
+    .section-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 12px; color: var(--primary); }
+    .section-intro { color: var(--muted); font-size: 1.05rem; margin-bottom: 40px; max-width: 600px; line-height: 1.6; }
 
-    .section-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: var(--primary);
-    }
-
-    .section-intro {
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 40px;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-
-    /* SERVICES GRID */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .service-card {
-      background: var(--bg);
-      border-radius: 16px;
-      padding: 28px 24px;
-      border-left: 4px solid var(--accent);
-    }
-
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .service-card { background: var(--bg); border-radius: 16px; padding: 28px 24px; border-left: 4px solid var(--accent); }
     .service-card .sicon { font-size: 1.8rem; margin-bottom: 12px; }
     .service-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
     .service-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
 
-    /* DOCTOR */
+    .doctors-list { display: flex; flex-direction: column; gap: 20px; }
     .doctor-box {
       background: linear-gradient(135deg, var(--accent2), #e8f4fd);
-      border-radius: 20px;
-      padding: 40px;
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      flex-wrap: wrap;
+      border-radius: 20px; padding: 36px 40px;
+      display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
     }
+    .doctor-box img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    .doctor-box .avatar-placeholder { width: 110px; height: 110px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0; }
+    .doctor-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 4px; }
+    .doctor-info .role { color: #0288d1; font-weight: 600; margin-bottom: 12px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .doctor-info p { color: var(--muted); line-height: 1.7; max-width: 520px; }
 
-    .doctor-avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.8rem;
-      flex-shrink: 0;
-    }
-
-    .doctor-info h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
-    .doctor-info .role { color: var(--accent); font-weight: 600; margin-bottom: 12px; }
-    .doctor-info p { color: var(--muted); line-height: 1.6; max-width: 500px; }
-
-    /* LOCATIONS */
-    .locations-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-
-    .location-card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 36px 28px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
-    }
-
+    .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .location-card { background: var(--white); border-radius: 20px; padding: 36px 28px; box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
     .location-card .loc-icon { font-size: 2rem; margin-bottom: 16px; }
-    .location-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; }
-
-    .loc-detail {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 12px;
-      align-items: flex-start;
-    }
-
+    .location-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+    .loc-detail { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
     .loc-detail .licon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
     .loc-detail p { font-size: 0.95rem; line-height: 1.5; }
     .loc-detail a { color: var(--primary); text-decoration: none; font-weight: 600; }
     .loc-detail a:hover { color: var(--accent); }
-
-    .hours-list { margin-top: 4px; }
-    .hours-list li {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      padding: 3px 0;
-      border-bottom: 1px solid #f0f0f0;
-      list-style: none;
-    }
+    .hours-list { margin-top: 4px; list-style: none; }
+    .hours-list li { display: flex; justify-content: space-between; font-size: 0.9rem; padding: 4px 0; border-bottom: 1px solid #f0f0f0; }
     .hours-list li span:first-child { color: var(--muted); }
 
-    /* TIPS */
-    .tips-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .tip-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 28px 24px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      text-align: center;
-    }
-
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .tip-card { background: var(--white); border-radius: 16px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
     .tip-card .tip-icon { font-size: 2rem; margin-bottom: 12px; }
-    .tip-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-    .tip-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    .tip-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .tip-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
 
-    /* CTA */
-    .cta-section {
-      background: linear-gradient(135deg, var(--primary), #0f3460);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 32px; }
+    .gallery-grid img { width: 100%; border-radius: 16px; object-fit: cover; height: 220px; }
 
+    .cta-section { background: linear-gradient(135deg, var(--primary), #0f3460); color: white; text-align: center; padding: 80px 20px; }
     .cta-section h2 { color: white; margin-bottom: 16px; }
     .cta-section p { opacity: 0.75; margin-bottom: 36px; font-size: 1.05rem; }
-
-    .cta-phones {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .phone-block {
-      background: rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 20px 32px;
-      text-align: center;
-    }
-
+    .cta-phones { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .phone-block { background: rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 32px; text-align: center; }
     .phone-block .loc { font-size: 0.8rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
     .phone-block a { display: block; color: var(--accent); font-size: 1.5rem; font-weight: 700; text-decoration: none; }
     .phone-block a:hover { color: white; }
 
-    /* MAP */
-    .map-section { padding: 0; }
     .map-section iframe { width: 100%; height: 360px; border: none; display: block; }
 
-    /* FOOTER */
-    footer {
-      background: var(--primary);
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 28px;
-      font-size: 0.85rem;
-      line-height: 1.8;
-    }
-
+    footer { background: var(--primary); color: rgba(255,255,255,0.5); text-align: center; padding: 28px; font-size: 0.85rem; line-height: 1.8; }
     footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
 
     @media (max-width: 600px) {
@@ -284,21 +113,19 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="brand">u <span>dentysty</span></div>
   <div class="nav-links">
     <a href="#uslugi">Usługi</a>
-    <a href="#lekarz">Lekarz</a>
+    <a href="#lekarze">Lekarze</a>
     <a href="#gabinety">Gabinety</a>
     <a href="#kontakt">Kontakt</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>Twój uśmiech<br>w <span>dobrych rękach</span></h1>
-  <p>Profesjonalna opieka stomatologiczna w Rzeszowie i Świlczy. Leczenie bezbolesne, nowoczesny sprzęt, indywidualne podejście do każdego pacjenta.</p>
+  <h1>Twój gabinet<br>stomatologiczny<br>w <span>Rzeszowie</span></h1>
+  <p>Profesjonalna opieka dla całej rodziny. Leczenie bezbolesne, nowoczesny sprzęt, indywidualne podejście do każdego pacjenta.</p>
   <div class="btns">
     <a href="tel:666691999" class="btn btn-primary">📞 Umów wizytę</a>
     <a href="#uslugi" class="btn btn-outline">Nasze usługi</a>
@@ -316,75 +143,78 @@
       <div class="service-card">
         <div class="sicon">🦷</div>
         <h3>Leczenie próchnicy</h3>
-        <p>Bezbolesne opracowanie ubytku ze znieczuleniem. Wypełnienie materiałem światłoutwardzalnym — ząb odzyskuje pierwotny kształt i funkcjonalność.</p>
+        <p>Nie warto zwlekać z leczeniem nawet niewielkich zmian próchnicowych. Przy zastosowaniu znieczulenia opracowanie ubytku przebiega bezboleśnie, szybko i komfortowo dla pacjenta. Ubytek wypełniany jest materiałem światłoutwardzalnym — ząb odzyskuje pierwotny kształt i funkcjonalność.</p>
       </div>
       <div class="service-card">
         <div class="sicon">🔬</div>
         <h3>Leczenie kanałowe</h3>
-        <p>Oczyszczenie kanałów korzeniowych z zainfekowanej zębiny i ich wypełnienie. Uratowanie zęba przed usunięciem.</p>
+        <p>Leczenie kanałowe polega na oczyszczeniu kanałów korzeniowych zęba z zainfekowanej zębiny oraz ich wypełnieniu. Taki ząb wymaga następnie odbudowy materiałem światłoutwardzalnym lub zastosowania korony.</p>
       </div>
       <div class="service-card">
         <div class="sicon">👑</div>
-        <h3>Korony porcelanowe</h3>
-        <p>Odbudowa protetyczna zniszczonej korony zęba. Doskonały efekt estetyczny i pełna funkcjonalność.</p>
+        <h3>Korona porcelanowa</h3>
+        <p>Zniszczona korona zęba wymaga odbudowy protetycznej czyli wykonania uzupełnienia odzwierciedlającego utracone tkanki zęba. Najczęściej wykonuje się korony porcelanowe osadzone na wkładzie cementowanym w korzeniu własnego zęba.</p>
       </div>
       <div class="service-card">
         <div class="sicon">🌉</div>
-        <h3>Mosty porcelanowe</h3>
-        <p>Stałe uzupełnienie protetyczne odtwarzające utracony ząb. Komfort użytkowania i naturalny wygląd.</p>
+        <h3>Most porcelanowy</h3>
+        <p>Most to stałe uzupełnienie protetyczne, które odtwarza utracony ząb. Cementowany jest na zębach sąsiadujących z luką. Gwarantuje doskonały efekt estetyczny, wygodę i komfort użytkowania.</p>
       </div>
       <div class="service-card">
         <div class="sicon">🔩</div>
         <h3>Implanty</h3>
-        <p>Tytanowe implanty naśladujące korzeń zęba. Najtrwalsze rozwiązanie przy utracie zęba — pełna estetyka i funkcja.</p>
+        <p>Implanty to śruby tytanowe, które naśladują korzeń zęba. Umożliwiają odtworzenie funkcji i estetyki utraconego zęba.</p>
       </div>
       <div class="service-card">
         <div class="sicon">🧒</div>
-        <h3>Leczenie dzieci</h3>
-        <p>Wizyty adaptacyjne, leczenie zębów mlecznych. Budujemy zaufanie i świadomość higieniczną od najmłodszych lat.</p>
+        <h3>Leczenie zębów mlecznych</h3>
+        <p>Próchnica to choroba zakaźna. Niestety nieleczony ząb mleczny infekuje ząb stały a jego zbyt wczesna utrata może spowodować zaburzenia zgryzu. W naszych gabinetach dbamy o budowanie świadomości rodziców, służymy radą i odpowiadamy na nurtujące pytania.</p>
       </div>
       <div class="service-card">
         <div class="sicon">❌</div>
-        <h3>Usuwanie zębów</h3>
-        <p>Bezbolesna ekstrakcja ze znieczuleniem. Właściwe zaopatrzenie zębodołu minimalizuje ryzyko powikłań.</p>
+        <h3>Usunięcie zęba</h3>
+        <p>Dzięki zastosowaniu znieczulenia usunięcie zęba przebiega bezboleśnie a odpowiednie zaopatrzenie zębodołu niweluje możliwość wystąpienia powikłań i umożliwia szybkie gojenie. Rozmowa i prawidłowy wywiad przed zabiegiem przyczyniają się do zwiększenia poczucia bezpieczeństwa i komfortu pacjenta.</p>
       </div>
       <div class="service-card">
         <div class="sicon">🩺</div>
         <h3>Leczenie chorób dziąseł</h3>
-        <p>Diagnostyka i leczenie stanów zapalnych przyzębia. Nieleczone choroby dziąseł mogą prowadzić do utraty zębów.</p>
+        <p>Stany zapalne w obrębie tkanek otaczających ząb są częstym powodem wizyt w gabinecie stomatologicznym. Nieleczone choroby dziąseł oraz przyzębia mogą nieść za sobą poważne konsekwencje włącznie z utratą zębów.</p>
       </div>
       <div class="service-card">
         <div class="sicon">📡</div>
-        <h3>RTG cyfrowe</h3>
-        <p>Nowoczesna radiowizjografia cyfrowa — doskonały obraz przy minimalnej dawce promieniowania. Bezpieczna i bezbolesna diagnostyka.</p>
+        <h3>RTG</h3>
+        <p>Badanie radiologiczne to bezbolesna i bezpieczna metoda umożliwiająca zobrazowanie próchnicy, zmian w obrębie kości, diagnostykę przed usunięciem zęba czy w trakcie leczenia kanałowego. Nasze gabinety wyposażone są w najnowocześniejsze systemy radiowizjografii cyfrowej co pozwala uzyskać doskonały obraz przy zastosowaniu najmniejszej dawki promieniowania.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LEKARZ -->
-<section class="alt" id="lekarz">
+<!-- LEKARZE -->
+<section class="alt" id="lekarze">
   <div class="container">
     <div class="section-label">Nasz zespół</div>
-    <h2>Lekarz prowadzący</h2>
+    <h2>Lekarze dentyści</h2>
     <br>
-    <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="doctors-list">
+
       <div class="doctor-box">
-        <img src="img/judyta.jpg" alt="lek. dent. Judyta Wiech-Kręblewska" style="width:100px;height:100px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+        <img src="img/judyta.jpg" alt="lek. dent. Judyta Wiech-Kręblewska">
         <div class="doctor-info">
-          <h3>lek. dent. Judyta Wiech-Kręblewska</h3>
+          <h3>Judyta Wiech-Kręblewska</h3>
           <div class="role">Lekarz dentysta</div>
-          <p>Doświadczony specjalista oferujący kompleksową opiekę stomatologiczną dla całej rodziny. Szczególna troska o komfort pacjenta i leczenie bezbolesne. Przyjmuje zarówno dorosłych jak i dzieci w gabinetach w Rzeszowie i Świlczy.</p>
+          <p>Absolwentka Uniwersytetu Medycznego w Lublinie w 2011 r. Swoje umiejętności doskonaliła początkowo pracując w gabinetach stomatologicznych w Rzeszowie, od 2014 roku wraz z mężem prowadzi własną działalność. Zajmuje się leczeniem zachowawczym, protetycznym i stomatologią estetyczną. Szczególnie ceni sobie pracę z dziećmi.</p>
         </div>
       </div>
+
       <div class="doctor-box">
-        <img src="img/photo1.jpg" alt="lek. dent. Aleksander Kręblewski" style="width:100px;height:100px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+        <img src="img/photo1.jpg" alt="lek. dent. Aleksander Kręblewski">
         <div class="doctor-info">
-          <h3>lek. dent. Aleksander Kręblewski</h3>
+          <h3>Aleksander Kręblewski</h3>
           <div class="role">Lekarz dentysta</div>
-          <p>Specjalista stomatologii ogólnej. Kompleksowe leczenie dorosłych i dzieci z naciskiem na profilaktykę i komfort pacjenta.</p>
+          <p>Absolwent wydziału lekarsko-dentystycznego Uniwersytetu Medycznego w Lublinie w 2011 r. Już podczas studiów szczególnie interesowała go protetyka i leczenie zaburzeń narządu żucia, aby kontynuować rozwój w tych kierunkach staż podyplomowy odbywał w Centrum Stomatologii w Lublinie. Pomysłodawca gabinetów stomatologii rodzinnej udentysty.pl. Zajmuje się stomatologią zachowawczą, protetyką, endodoncją oraz chirurgią.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -393,16 +223,16 @@
 <section id="gabinety">
   <div class="container">
     <div class="section-label">Gdzie nas znajdziesz</div>
-    <h2>Nasze gabinety</h2>
+    <h2>Zapraszamy do naszych gabinetów</h2>
     <p class="section-intro">Działamy w dwóch lokalizacjach — w Rzeszowie i Świlczy.</p>
 
     <div class="locations-grid">
       <div class="location-card">
         <div class="loc-icon">🏥</div>
-        <h3>Rzeszów — Przychodnia Rejonowa Nr 2</h3>
+        <h3>Gabinet stomatologiczny<br>Przychodnia Rejonowa Nr 2</h3>
         <div class="loc-detail">
           <div class="licon">📍</div>
-          <p><a href="https://maps.app.goo.gl/1SiGxqMni5dyxMkMA" target="_blank">ul. Dębicka 160<br>35-213 Rzeszów</a></p>
+          <p><a href="https://maps.app.goo.gl/1SiGxqMni5dyxMkMA" target="_blank">ul. Dębicka 160<br>Rzeszów</a></p>
         </div>
         <div class="loc-detail">
           <div class="licon">📞</div>
@@ -425,10 +255,10 @@
 
       <div class="location-card">
         <div class="loc-icon">🏡</div>
-        <h3>Świlcza — Gminny Ośrodek Zdrowia</h3>
+        <h3>Gabinet stomatologiczny<br>Gminny Ośrodek Zdrowia</h3>
         <div class="loc-detail">
           <div class="licon">📍</div>
-          <p>Świlcza 142<br>36-072 Świlcza</p>
+          <p>Świlcza 142</p>
         </div>
         <div class="loc-detail">
           <div class="licon">📞</div>
@@ -455,25 +285,25 @@
 <!-- PORADY -->
 <section class="alt">
   <div class="container">
-    <div class="section-label">Wiedza i porady</div>
-    <h2>Warto wiedzieć</h2>
-    <p class="section-intro">Kilka wskazówek od naszego gabinetu.</p>
+    <div class="section-label">Warto wiedzieć</div>
+    <h2>Porady dla pacjentów</h2>
+    <p class="section-intro">Kilka ważnych informacji od naszego gabinetu.</p>
 
     <div class="tips-grid">
       <div class="tip-card">
         <div class="tip-icon">😬</div>
         <h3>Ból zęba — co robić?</h3>
-        <p>Nie lekceważ bólu zęba. Środki przeciwbólowe przyniosą chwilową ulgę, ale nie usuną przyczyny. Umów wizytę jak najszybciej.</p>
+        <p>Ból zęba to dolegliwość, której nie należy lekceważyć. Najczęściej pojawia się jako objaw próchnicy, chorób miazgi ale występuje także przy nadwrażliwości czy stanach zapalnych w jamie ustnej. Popularne środki przeciwbólowe przyniosą chwilową ulgę, ale nie zlikwidują przyczyny bólu.</p>
       </div>
       <div class="tip-card">
         <div class="tip-icon">👶</div>
         <h3>Dziecko w gabinecie</h3>
-        <p>Wizyty adaptacyjne to pierwsze wizyty dziecka — w formie zabawy poznaje gabinet i podstawy higieny jamy ustnej. Budujemy zaufanie od początku.</p>
+        <p>Wizyty adaptacyjne to pierwsze wizyty dziecka w gabinecie, podczas których w formie zabawy mały pacjent poznaje atrybuty dentysty, gabinet i podstawowe informacje dotyczące higieny jamy ustnej.</p>
       </div>
       <div class="tip-card">
         <div class="tip-icon">⏱️</div>
         <h3>Nie zwlekaj z leczeniem</h3>
-        <p>Nawet mała zmiana próchnicowa nieleczona rośnie. Im wcześniej, tym taniej, szybciej i mniej inwazyjnie.</p>
+        <p>Nie warto zwlekać z leczeniem nawet niewielkich zmian próchnicowych. Im wcześniej, tym taniej, szybciej i mniej inwazyjnie — a leczenie ze znieczuleniem przebiega bezboleśnie i komfortowo.</p>
       </div>
     </div>
   </div>
@@ -484,9 +314,9 @@
   <div class="container">
     <div class="section-label">Galeria</div>
     <h2>Nasz gabinet</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:32px;">
-      <img src="img/photo2.jpg" alt="Gabinet stomatologiczny - fasada" style="width:100%;border-radius:16px;object-fit:cover;height:220px;">
-      <img src="img/photo3.jpg" alt="Gabinet stomatologiczny - wnętrze" style="width:100%;border-radius:16px;object-fit:cover;height:220px;">
+    <div class="gallery-grid">
+      <img src="img/photo2.jpg" alt="Gabinet stomatologiczny — fasada">
+      <img src="img/photo3.jpg" alt="Gabinet stomatologiczny — wnętrze">
     </div>
   </div>
 </section>
@@ -515,9 +345,8 @@
   </iframe>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <p><strong style="color:rgba(255,255,255,0.8)">u dentysty</strong> · lek. dent. Judyta Wiech-Kręblewska</p>
+  <p><strong style="color:rgba(255,255,255,0.8)">u dentysty</strong> · Gabinety stomatologii rodzinnej</p>
   <p>Rzeszów: ul. Dębicka 160 · <a href="tel:666691999">666 691 999</a> &nbsp;|&nbsp; Świlcza: Świlcza 142 · <a href="tel:666621222">666 621 222</a></p>
   <p style="margin-top:8px">&copy; 2026 u dentysty</p>
 </footer>
