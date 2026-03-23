@@ -114,8 +114,23 @@
 
     .highlight-box { margin-top: 28px; padding: 20px 24px; background: var(--accent2); border-left: 4px solid var(--accent); border-radius: 4px; font-size: 0.97rem; line-height: 1.7; color: var(--text); }
 
-    @media (max-width: 600px) {
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--primary); border-radius: 2px; transition: all 0.3s; }
+
+    .mobile-menu {
+      display: none; flex-direction: column;
+      background: var(--white); border-top: 1px solid #e8e8e8;
+      padding: 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      position: absolute; top: 100%; left: 0; right: 0; z-index: 99;
+    }
+    .mobile-menu a { padding: 12px 32px; color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 500; display: block; }
+    .mobile-menu a:hover { color: var(--accent); background: var(--accent2); }
+    .mobile-menu.open { display: flex; }
+
+    @media (max-width: 640px) {
+      nav { position: relative; padding: 14px 20px; }
       nav .nav-links { display: none; }
+      .hamburger { display: flex; }
       .doctor-box { flex-direction: column; text-align: center; }
     }
   </style>
@@ -131,6 +146,17 @@
     <a href="#pytania">Pytania</a>
     <a href="#galeria">Galeria</a>
     <a href="#kontakt">Kontakt</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#o-nas" onclick="closeMenu()">O nas</a>
+    <a href="#oferta" onclick="closeMenu()">Oferta</a>
+    <a href="#zapisy" onclick="closeMenu()">Zapisy</a>
+    <a href="#pytania" onclick="closeMenu()">Pytania</a>
+    <a href="#galeria" onclick="closeMenu()">Galeria</a>
+    <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
   </div>
 </nav>
 
@@ -509,6 +535,15 @@
   <p style="margin-top:8px;font-size:0.8rem;">&copy; 2026 udentysty.pl</p>
 </footer>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMenu() { mobileMenu.classList.remove('open'); }
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
+  });
+</script>
 <script>
   document.getElementById('booking-form').addEventListener('submit', async function(e) {
     e.preventDefault();
