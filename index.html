@@ -421,7 +421,8 @@
 
       <button type="submit"
         style="padding:13px 28px;background:var(--accent);color:white;border:none;border-radius:6px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s;align-self:flex-start;"
-        onmouseover="this.style.background='#9aaa10'" onmouseout="this.style.background='#B2C225'">
+        onmouseover="this.style.background='#9aaa10'" onmouseout="this.style.background='#B2C225'"
+        type="submit">
         Wyślij zgłoszenie →
       </button>
 
@@ -524,7 +525,9 @@
 
       if (res.ok) {
         form.style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
+        const success = document.getElementById('form-success');
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         btn.textContent = 'Błąd — spróbuj ponownie';
         btn.disabled = false;
