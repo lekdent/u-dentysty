@@ -447,19 +447,18 @@
 
       <input type="hidden" name="_subject" value="Nowy zapis online — udentysty.pl">
 
+      <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;">
+        <input type="checkbox" name="zgoda" required style="margin-top:3px;accent-color:var(--accent);flex-shrink:0;">
+        <span style="font-size:0.88rem;color:var(--muted);line-height:1.5;">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Udentysty w celu umówienia wizyty.</span>
+      </label>
+
       <button type="submit"
         style="padding:13px 28px;background:var(--accent);color:white;border:none;border-radius:6px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s;align-self:flex-start;"
-        onmouseover="this.style.background='#9aaa10'" onmouseout="this.style.background='#B2C225'"
-        type="submit">
+        onmouseover="this.style.background='#9aaa10'" onmouseout="this.style.background='#B2C225'">
         Wyślij zgłoszenie →
       </button>
 
-      <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;">
-        <input type="checkbox" name="zgoda" required style="margin-top:3px;accent-color:var(--accent);flex-shrink:0;">
-        <span style="font-size:0.88rem;color:var(--muted);line-height:1.5;">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Udentysty w celu umówienia wizyty. *</span>
-      </label>
-
-      <p style="font-size:0.82rem;color:var(--muted);">* pola wymagane · Skontaktujemy się z Tobą telefonicznie w ciągu 24h.</p>
+      <p style="font-size:0.82rem;color:var(--muted);">Skontaktujemy się z Tobą telefonicznie w ciągu 24h.</p>
     </form>
   </div>
 </section>
