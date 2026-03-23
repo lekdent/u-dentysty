@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>u dentysty – Twój gabinet stomatologiczny w Rzeszowie</title>
+  <meta name="description" content="Gabinet stomatologiczny udentysty.pl — lek. dent. Judyta Wiech-Kręblewska i Aleksander Kręblewski. Przyjmujemy w Rzeszowie (ul. Dębicka 160) i Świlczy (Świlcza 142). Leczenie zachowawcze, protetyka, implanty, leczenie dzieci.">
+  <meta property="og:title" content="u dentysty – Twój gabinet stomatologiczny w Rzeszowie">
+  <meta property="og:description" content="Profesjonalna opieka stomatologiczna dla całej rodziny. Rzeszów i Świlcza. Zapisy online.">
+  <meta property="og:image" content="img/logo.jpg">
+  <meta property="og:type" content="website">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -52,7 +57,7 @@
     section { padding: 72px 20px; }
     section.alt { background: var(--bg); }
     .container { max-width: 1000px; margin: 0 auto; }
-    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 10px; }
     h2 { font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 700; margin-bottom: 12px; color: var(--text); }
     h3.subsection { font-size: 1.1rem; font-weight: 700; margin: 48px 0 20px; color: var(--text); padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block; }
     .section-intro { color: var(--muted); font-size: 1rem; margin-bottom: 40px; max-width: 600px; line-height: 1.7; }
@@ -70,7 +75,7 @@
       display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
     }
     .doctor-box img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .doctor-info .role { color: var(--accent); font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .doctor-info .role { color: var(--accent-dark); font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
     .doctor-info h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
     .doctor-info p { color: var(--muted); line-height: 1.7; max-width: 520px; font-size: 0.93rem; }
 
@@ -415,7 +420,7 @@
         </div>
         <div>
           <label style="font-size:0.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;">Telefon *</label>
-          <input type="tel" name="phone" required placeholder="600 000 000"
+          <input type="tel" name="phone" required placeholder="600 000 000" pattern="[0-9 +\-]{9,15}"
             style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:6px;font-size:0.95rem;outline:none;transition:border 0.2s;"
             onfocus="this.style.borderColor='#B2C225'" onblur="this.style.borderColor='#ddd'">
         </div>
@@ -500,8 +505,8 @@
     <div class="section-label">Galeria</div>
     <h2>Nasz gabinet</h2>
     <div class="gallery-grid">
-      <img src="img/photo2.jpg" alt="Gabinet stomatologiczny — fasada">
-      <img src="img/photo3.jpg" alt="Gabinet stomatologiczny — wnętrze">
+      <img src="img/photo2.jpg" alt="Gabinet stomatologiczny udentysty — fasada przy Przychodni Rejonowej Nr 2, Rzeszów">
+      <img src="img/photo3.jpg" alt="Wnętrze gabinetu stomatologicznego udentysty — fotel dentystyczny">
     </div>
   </div>
 </section>
@@ -543,8 +548,16 @@
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  function closeMenu() { mobileMenu.classList.remove('open'); }
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    hamburger.innerHTML = mobileMenu.classList.contains('open')
+      ? '<span style="transform:rotate(45deg);translate:0 7px"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg);translate:0 -7px"></span>'
+      : '<span></span><span></span><span></span>';
+  });
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    hamburger.innerHTML = '<span></span><span></span><span></span>';
+  }
   document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
   });
