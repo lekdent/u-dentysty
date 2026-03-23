@@ -371,7 +371,11 @@
     <h2>Umów wizytę online</h2>
     <p class="section-intro">Wypełnij formularz — oddzwonimy i potwierdzimy termin.</p>
 
-    <form action="https://formspree.io/f/mdawrpjl" method="POST" id="booking-form"
+    <div id="form-success" style="display:none;padding:20px 24px;background:#f0f7d8;border-left:4px solid var(--accent);border-radius:6px;font-size:1rem;color:var(--text);">
+      ✅ <strong>Zgłoszenie wysłane!</strong> Skontaktujemy się z Tobą telefonicznie w ciągu 24h.
+    </div>
+
+    <form id="booking-form"
       style="max-width:560px;display:flex;flex-direction:column;gap:16px;">
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
@@ -414,7 +418,6 @@
       </div>
 
       <input type="hidden" name="_subject" value="Nowy zapis online — udentysty.pl">
-      <input type="hidden" name="_next" value="">
 
       <button type="submit"
         style="padding:13px 28px;background:var(--accent);color:white;border:none;border-radius:6px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s;align-self:flex-start;"
@@ -504,5 +507,33 @@
   <p style="margin-top:8px;font-size:0.8rem;">&copy; 2026 udentysty.pl</p>
 </footer>
 
+<script>
+  document.getElementById('booking-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type=submit]');
+    btn.textContent = 'Wysyłanie...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('https://formspree.io/f/mdawrpjl', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Błąd — spróbuj ponownie';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Błąd — spróbuj ponownie';
+      btn.disabled = false;
+    }
+  });
+</script>
 </body>
 </html>
