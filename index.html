@@ -126,6 +126,7 @@
   <div class="nav-links">
     <a href="#o-nas">O nas</a>
     <a href="#oferta">Oferta</a>
+    <a href="#zapisy">Zapisy</a>
     <a href="#pytania">Pytania</a>
     <a href="#galeria">Galeria</a>
     <a href="#kontakt">Kontakt</a>
@@ -360,6 +361,69 @@
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ZAPISY -->
+<section id="zapisy">
+  <div class="container">
+    <div class="section-label">Zapisy online</div>
+    <h2>Umów wizytę online</h2>
+    <p class="section-intro">Wypełnij formularz — oddzwonimy i potwierdzimy termin.</p>
+
+    <form action="https://formspree.io/f/TWÓJ_KOD" method="POST" id="booking-form"
+      style="max-width:560px;display:flex;flex-direction:column;gap:16px;">
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="font-size:0.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;">Imię i nazwisko *</label>
+          <input type="text" name="name" required placeholder="Jan Kowalski"
+            style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:6px;font-size:0.95rem;outline:none;transition:border 0.2s;"
+            onfocus="this.style.borderColor='#B2C225'" onblur="this.style.borderColor='#ddd'">
+        </div>
+        <div>
+          <label style="font-size:0.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;">Telefon *</label>
+          <input type="tel" name="phone" required placeholder="600 000 000"
+            style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:6px;font-size:0.95rem;outline:none;transition:border 0.2s;"
+            onfocus="this.style.borderColor='#B2C225'" onblur="this.style.borderColor='#ddd'">
+        </div>
+      </div>
+
+      <div>
+        <label style="font-size:0.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;">Gabinet *</label>
+        <select name="gabinet" required
+          style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:6px;font-size:0.95rem;background:white;outline:none;">
+          <option value="">— wybierz —</option>
+          <option value="Rzeszów, ul. Dębicka 160">Rzeszów · ul. Dębicka 160</option>
+          <option value="Świlcza 142">Świlcza 142</option>
+        </select>
+      </div>
+
+      <div>
+        <label style="font-size:0.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;">Preferowany termin</label>
+        <input type="text" name="termin" placeholder="np. środa rano, dowolny piątek"
+          style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:6px;font-size:0.95rem;outline:none;transition:border 0.2s;"
+          onfocus="this.style.borderColor='#B2C225'" onblur="this.style.borderColor='#ddd'">
+      </div>
+
+      <div>
+        <label style="font-size:0.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;">Powód wizyty</label>
+        <textarea name="message" rows="3" placeholder="np. ból zęba, kontrola, leczenie kanałowe..."
+          style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:6px;font-size:0.95rem;resize:vertical;outline:none;transition:border 0.2s;font-family:inherit;"
+          onfocus="this.style.borderColor='#B2C225'" onblur="this.style.borderColor='#ddd'"></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="Nowy zapis online — udentysty.pl">
+      <input type="hidden" name="_next" value="">
+
+      <button type="submit"
+        style="padding:13px 28px;background:var(--accent);color:white;border:none;border-radius:6px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s;align-self:flex-start;"
+        onmouseover="this.style.background='#9aaa10'" onmouseout="this.style.background='#B2C225'">
+        Wyślij zgłoszenie →
+      </button>
+
+      <p style="font-size:0.82rem;color:var(--muted);">* pola wymagane · Skontaktujemy się z Tobą telefonicznie w ciągu 24h.</p>
+    </form>
   </div>
 </section>
 
