@@ -82,10 +82,10 @@
 
     .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
     .location-card { background: var(--white); border: 1px solid #e8e8e8; border-radius: 8px; padding: 28px 24px; }
-    .location-card .loc-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .location-card .loc-icon { font-size: 1.5rem; margin-bottom: 12px; color: var(--accent-dark); }
     .location-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
     .loc-detail { display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start; }
-    .loc-detail .licon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .loc-detail .licon { font-size: 0.95rem; flex-shrink: 0; margin-top: 3px; color: var(--accent-dark); }
     .loc-detail p { font-size: 0.93rem; line-height: 1.5; }
     .loc-detail a { color: var(--text); text-decoration: none; font-weight: 600; }
     .loc-detail a:hover { color: var(--accent); }
@@ -95,7 +95,7 @@
 
     .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
     .tip-card { background: var(--white); border: 1px solid #e8e8e8; border-radius: 8px; padding: 24px 22px; }
-    .tip-card .tip-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .tip-card .tip-icon { font-size: 1.5rem; margin-bottom: 10px; color: var(--accent-dark); }
     .tip-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
     .tip-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
 
@@ -172,7 +172,7 @@
   <h1>Twój gabinet<br>stomatologiczny<br>w <span>Rzeszowie</span></h1>
   <p>Profesjonalna opieka dla całej rodziny. Leczenie bezbolesne, nowoczesny sprzęt, indywidualne podejście do każdego pacjenta.</p>
   <div class="btns">
-    <a href="#zapisy" class="btn btn-primary">📅 Umów wizytę</a>
+    <a href="#zapisy" class="btn btn-primary">Umów wizytę</a>
     <a href="#oferta" class="btn btn-outline">Oferta</a>
   </div>
 </div>
@@ -212,18 +212,18 @@
     <h3 class="subsection">Gabinety</h3>
     <div class="locations-grid">
       <div class="location-card">
-        <div class="loc-icon">🏥</div>
+        <div class="loc-icon"><i class="fa-solid fa-hospital"></i></div>
         <h3>Gabinet stomatologiczny<br>Przychodnia Rejonowa Nr 2</h3>
         <div class="loc-detail">
-          <div class="licon">📍</div>
+          <div class="licon"><i class="fa-solid fa-location-dot"></i></div>
           <p><a href="https://maps.app.goo.gl/1SiGxqMni5dyxMkMA" target="_blank">ul. Dębicka 160, Rzeszów</a></p>
         </div>
         <div class="loc-detail">
-          <div class="licon">📞</div>
+          <div class="licon"><i class="fa-solid fa-phone"></i></div>
           <p><a href="tel:666691999">666 691 999</a></p>
         </div>
         <div class="loc-detail">
-          <div class="licon">🕐</div>
+          <div class="licon"><i class="fa-regular fa-clock"></i></div>
           <div style="width:100%">
             <p style="font-size:0.82rem;color:var(--muted);margin-bottom:4px;">lek. dent. Judyta Wiech-Kręblewska</p>
             <ul class="hours-list" style="margin-bottom:10px;">
@@ -237,18 +237,18 @@
         </div>
       </div>
       <div class="location-card">
-        <div class="loc-icon">🏡</div>
+        <div class="loc-icon"><i class="fa-solid fa-house-medical"></i></div>
         <h3>Gabinet stomatologiczny<br>Gminny Ośrodek Zdrowia</h3>
         <div class="loc-detail">
-          <div class="licon">📍</div>
+          <div class="licon"><i class="fa-solid fa-location-dot"></i></div>
           <p>Świlcza 142</p>
         </div>
         <div class="loc-detail">
-          <div class="licon">📞</div>
+          <div class="licon"><i class="fa-solid fa-phone"></i></div>
           <p><a href="tel:666621222">666 621 222</a></p>
         </div>
         <div class="loc-detail">
-          <div class="licon">🕐</div>
+          <div class="licon"><i class="fa-regular fa-clock"></i></div>
           <div style="width:100%">
             <p style="font-size:0.82rem;color:var(--muted);margin-bottom:4px;">lek. dent. Aleksander Kręblewski</p>
             <ul class="hours-list">
@@ -478,24 +478,24 @@
 
     <div class="tips-grid">
       <div class="tip-card">
-        <div class="tip-icon">😬</div>
+        <div class="tip-icon"><i class="fa-solid fa-tooth"></i></div>
         <h3>Ból zęba — co robić?</h3>
         <p>Ból zęba to dolegliwość, której nie należy lekceważyć. Najczęściej pojawia się jako objaw próchnicy, chorób miazgi ale występuje także przy nadwrażliwości czy stanach zapalnych w jamie ustnej. Popularne środki przeciwbólowe przyniosą chwilową ulgę, ale nie zlikwidują przyczyny bólu.</p>
       </div>
       <div class="tip-card">
-        <div class="tip-icon">👶</div>
+        <div class="tip-icon"><i class="fa-solid fa-child"></i></div>
         <h3>Dziecko w gabinecie</h3>
         <p>Wizyty adaptacyjne to pierwsze wizyty dziecka w gabinecie, podczas których w formie zabawy mały pacjent poznaje atrybuty dentysty, gabinet i podstawowe informacje dotyczące higieny jamy ustnej.</p>
       </div>
       <div class="tip-card">
-        <div class="tip-icon">😨</div>
+        <div class="tip-icon"><i class="fa-solid fa-heart-pulse"></i></div>
         <h3>Boję się dentysty</h3>
         <p>Strach przed wizytą u dentysty to bardzo powszechna dolegliwość. W naszym gabinecie podchodzimy do każdego pacjenta z cierpliwością i zrozumieniem. Stosujemy znieczulenie miejscowe, dzięki któremu zabiegi przebiegają bezboleśnie. Powiedz nam o swoich obawach — razem znajdziemy sposób, żeby wizyta była jak najbardziej komfortowa.</p>
       </div>
     </div>
 
     <div class="highlight-box">
-      ⏱️ <strong>Nie zwlekaj z leczeniem</strong> — nie warto odkładać wizyty nawet przy niewielkich zmianach próchnicowych. Im wcześniej, tym taniej, szybciej i mniej inwazyjnie. Leczenie ze znieczuleniem przebiega bezboleśnie i komfortowo.
+      <i class="fa-solid fa-clock" style="color:var(--accent-dark)"></i> <strong>Nie zwlekaj z leczeniem</strong> — nie warto odkładać wizyty nawet przy niewielkich zmianach próchnicowych. Im wcześniej, tym taniej, szybciej i mniej inwazyjnie. Leczenie ze znieczuleniem przebiega bezboleśnie i komfortowo.
     </div>
   </div>
 </section>
@@ -530,11 +530,11 @@
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px;background:#e8e8e8;">
   <div>
-    <div style="padding:12px 20px;background:#f9f9f9;font-size:0.82rem;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:1px;border-top:1px solid #e8e8e8;">📍 Rzeszów · ul. Dębicka 160</div>
+    <div style="padding:12px 20px;background:#f9f9f9;font-size:0.82rem;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:1px;border-top:1px solid #e8e8e8;"><i class="fa-solid fa-location-dot"></i> Rzeszów · ul. Dębicka 160</div>
     <iframe src="https://maps.google.com/maps?q=D%C4%99bicka+160,+Rzesz%C3%B3w&output=embed" allowfullscreen loading="lazy" title="Rzeszów" style="width:100%;height:300px;border:none;display:block;"></iframe>
   </div>
   <div>
-    <div style="padding:12px 20px;background:#f9f9f9;font-size:0.82rem;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:1px;border-top:1px solid #e8e8e8;">📍 Świlcza 142</div>
+    <div style="padding:12px 20px;background:#f9f9f9;font-size:0.82rem;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:1px;border-top:1px solid #e8e8e8;"><i class="fa-solid fa-location-dot"></i> Świlcza 142</div>
     <iframe src="https://maps.google.com/maps?q=%C5%9Awilcza+142,+36-072+%C5%9Awilcza&output=embed" allowfullscreen loading="lazy" title="Świlcza" style="width:100%;height:300px;border:none;display:block;"></iframe>
   </div>
 </div>
